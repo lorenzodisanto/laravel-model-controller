@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  return view('home');
-});
+// rotta homepage
+Route::get('/', [PageController::class,'base'])->name('home');
+
+// rotta movie card
+Route::get('/movies', [PageController::class,'index'])->name('movies.index');
