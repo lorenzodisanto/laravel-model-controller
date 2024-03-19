@@ -12,6 +12,9 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h3>{{$movie->title}}</h3>
+                        <a href="{{ route('movies.show', [
+                            'id' => $movie->id,
+                        ]) }}">Info</a>
                     </div>
                 </div>
             </div>

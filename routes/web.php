@@ -19,3 +19,6 @@ Route::get('/', [PageController::class,'base'])->name('home');
 
 // rotta movie card
 Route::get('/movies', [PageController::class,'index'])->name('movies.index');
+
+// rotta dettaglio movie
+Route::get('/movies/{id}',[PageController::class, 'show'])->name('movies.show');
