@@ -6,12 +6,12 @@
 @section('main-content')
     <div class="container py-4">
         <h2 class="text-center ">Movies</h2>
-      <div class="row g-4">
+      <div class="row g-4 mt-2">
         @forelse ($movies as $movie)
             <div class="col-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h3>{{$movie->title}}</h3>
+                        <h4>{{$movie->title}}</h4>
                         <a href="{{ route('movies.show', [
                             'id' => $movie->id,
                         ]) }}">Info</a>
